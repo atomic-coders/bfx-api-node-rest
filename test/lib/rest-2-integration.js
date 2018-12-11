@@ -94,6 +94,7 @@ describe('RESTv2 integration (mock server) tests', () => {
     // public
     ['ticker', 'ticker.tBTCUSD', ['tBTCUSD']],
     ['tickers', 'tickers', [['tBTCUSD', 'tETHUSD']]],
+    ['tickersHistory', 'tickers_hist', [['tBTCUSD', 'tETHUSD'], 'start', 'end', 'limit']],
     ['stats', 'stats.key.context', ['key', 'context']],
     ['candles', 'candles.trade:30m:tBTCUSD.hist', [{ timeframe: '30m', symbol: 'tBTCUSD', section: 'hist' }]],
 
@@ -103,9 +104,12 @@ describe('RESTv2 integration (mock server) tests', () => {
     ['alertDelete', 'alert_del.symbol.price', ['symbol', 'price']],
     ['accountTrades', 'trades.BTCUSD.0.10.50.1', ['BTCUSD', 0, 10, 50, 1]],
     ['wallets', 'wallets'],
+    ['walletsHistory', 'wallets_hist.end', ['end']],
     ['activeOrders', 'active_orders'],
     ['orderHistory', 'orders.sym.start.end.limit', ['sym', 'start', 'end', 'limit']],
     ['positions'],
+    ['positionsHistory', 'positions_hist.start.end.limit', ['start', 'end', 'limit']],
+    ['positionsAudit', 'positions_audit.id.start.end.limit', ['id', 'start', 'end', 'limit']],
     ['fundingOffers', 'f_offers.sym', ['sym']],
     ['fundingOfferHistory', 'f_offer_hist.sym.start.end.limit', ['sym', 'start', 'end', 'limit']],
     ['fundingLoans', 'f_loans.sym', ['sym']],
